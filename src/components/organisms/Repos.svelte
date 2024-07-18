@@ -22,9 +22,9 @@
 	});
 </script>
 
-<section class="wrapper" id="code">
+<section class="wrapper" id="projects">
 	<div class="title">
-		<h2><span>code</span>:work</h2>
+		<h2><span>code</span>:projects</h2>
 	</div>
 	<div class="grid">
 		{#if repos}
@@ -211,4 +211,12 @@
 			gap: 0.9rem;
 		}
 	}
+
+	section {
+		margin-bottom: 6rem;
+		gap: 4.5rem;
+		grid-template-columns: 1fr 1fr;
+		align-items: center;
+	}
+	
 </style>

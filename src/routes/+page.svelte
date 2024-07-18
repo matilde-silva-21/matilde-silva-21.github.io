@@ -2,18 +2,21 @@
 	import NavHost from '../components/molecules/NavHost.svelte';
 	import Hero from '../components/organisms/Hero.svelte';
 	import About from '../components/organisms/About.svelte';
-	import Art from '../components/organisms/Art.svelte';
 	import Repos from '../components/organisms/Repos.svelte';
-	import Supporters from '../components/organisms/Supporters.svelte';
 	import Footer from '../components/molecules/Footer.svelte';
+	import Timeline from '../components/organisms/Timeline.svelte'
 </script>
 
 <NavHost />
 <main>
 	<Hero />
 	<About />
-	<Art />
 	<Repos />
-	<Supporters />
+	<Timeline />
 	<Footer />
 </main>
+
+<!--
+	https://github.com/sytanta/svelte-animated-timeline
+	https://github.com/K-Sato1995/svelte-vertical-timeline
+-->

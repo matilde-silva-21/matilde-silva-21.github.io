@@ -30,7 +30,20 @@
 					/></svg
 				>
 			</Nav>
-			<Nav href="#aw" section="work" isSelected={y > 675}>
+			<Nav href="#projects" section="projects" isSelected={y > 675 && y < 1000}>
+				<svg
+					xmlns="http://www.w3.org/2000/svg"
+					width="24"
+					height="24"
+					fill="var(--accent)"
+					viewBox="0 0 24 24"
+					><path fill="none" d="M0 0h24v24H0z" /><path
+						d="M20 6h-4V4c0-1.11-.89-2-2-2h-4c-1.11 0-2 .89-2 2v2H4c-1.11 0-1.99.89-1.99 2L2 19c0 1.11.89 2 2 2h16c1.11 0 2-.89 2-2V8c0-1.11-.89-2-2-2zm-6 0h-4V4h4v2z"
+					/></svg
+				>
+			</Nav>
+			<!-- TODO fix da barra de navegaçao em mobile -->
+			<Nav href="#experience" section="experience" isSelected={y > 1000}>
 				<svg
 					xmlns="http://www.w3.org/2000/svg"
 					width="24"
@@ -46,7 +59,6 @@
 	</div>
 </nav>
 
-<!-- this is the coolest thing ever wtf?? -->
 <svelte:window bind:scrollY={y} />
 
 <style lang="scss">
@@ -84,7 +96,7 @@
 			border-bottom: 1.5px solid var(--accent-opacity);
 			padding: 0.5rem 0;
 			margin-top: 0.5rem;
-			width: 34rem;
+			width: 40rem;
 			background-color: var(--elevation-five);
 			box-shadow: 0px 15px 8px -10px rgba(0, 0, 0, 0.4);
 		}
@@ -101,7 +113,7 @@
 		div ul {
 			display: flex;
 			justify-content: space-evenly;
-			gap: 2vw;
+			overflow: scroll;
 		}
 	}
 </style>

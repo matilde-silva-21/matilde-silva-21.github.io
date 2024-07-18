@@ -1,5 +1,4 @@
 <script>
-	import RichPresence from '../molecules/RichPresence.svelte';
 	import Tooltip from '../atoms/Tooltip.svelte';
 
 	// i didnt write this idk
@@ -17,11 +16,8 @@
 </script>
 
 <section id="about" class="wrapper">
-	<div>
-		<RichPresence />
-	</div>
 	<div class="text">
-		<h2>bio</h2>
+		<h2>about me</h2>
 		<p>
 			Hey there, I'm afn! :] I'm a <Tooltip tip={age}
 				><span>{Math.floor(Number(age))}</span></Tooltip
@@ -45,7 +41,6 @@
 
 	section {
 		margin-bottom: 6rem;
-		display: grid;
 		gap: 4.5rem;
 		grid-template-columns: 1fr 1fr;
 		align-items: center;
@@ -54,6 +49,10 @@
 	.text {
 		position: relative;
 		line-height: 1.75rem;
+		align-items: center;
+		display: flex;
+		justify-content: center;
+		flex-direction: column;
 	}
 
 	span {
@@ -73,7 +72,7 @@
 
 	.text::before {
 		@include outlineText(
-			$content: 'afn',
+			$content: 'matilde silva',
 			$translateX: 97%,
 			$translateY: -5%,
 			$fontSize: 300px,
@@ -82,8 +81,9 @@
 	}
 
 	h2 {
-		display: none;
+		display: block;
 		margin-top: 1rem;
+		margin-bottom: 1rem;
 	}
 
 	@media (max-width: 868px) {

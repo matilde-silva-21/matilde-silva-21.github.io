@@ -18,6 +18,7 @@
 </script>
 
 <div class="img-container">
+	<!-- TODO: mudar a imagem -->
 	<div
 		on:mousemove={enterRotate3D}
 		on:mouseleave={leaveRotate3D}
