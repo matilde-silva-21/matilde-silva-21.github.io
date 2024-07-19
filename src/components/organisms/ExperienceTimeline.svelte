@@ -65,5 +65,8 @@ const options = [
 		display: inline-block;
 		margin-bottom: 1rem;
 	}
-	
+
+	.wrapper {
+		margin-bottom: 2.75rem;
+	}
 </style>

@@ -17,7 +17,7 @@
 		<div class="socials">
 			<Socials />
 		</div>
-		<Button side on:click={handleClick} on:keypress={handleClick}>Discover my work ↓</Button>
+		<Button side on:click={handleClick} on:keypress={handleClick}>Check out my CV ↗</Button>
 	</div>
 	<HeroImage />
 </section>
@@ -53,10 +53,6 @@
 
 	h4 {
 		margin-top: 1rem;
-	}
-
-	h1::before {
-		@include outlineText($content: '///', $translateX: -95%, $letterSpacing: -0.1em);
 	}
 
 	@media screen and (max-width: 1240px) {

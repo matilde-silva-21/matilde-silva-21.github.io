@@ -70,16 +70,6 @@
 		text-decoration: none;
 	}
 
-	.text::before {
-		@include outlineText(
-			$content: 'matilde silva',
-			$translateX: 97%,
-			$translateY: -5%,
-			$fontSize: 300px,
-			$opacity: 0.22
-		);
-	}
-
 	h2 {
 		display: block;
 		margin-top: 1rem;

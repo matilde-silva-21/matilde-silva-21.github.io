@@ -4,7 +4,8 @@
 	import About from '../components/organisms/About.svelte';
 	import Repos from '../components/organisms/Repos.svelte';
 	import Footer from '../components/molecules/Footer.svelte';
-	import Timeline from '../components/organisms/Timeline.svelte'
+	import ExperienceTimeline from '../components/organisms/ExperienceTimeline.svelte'
+	import EducationTimeline from '../components/organisms/EducationTimeline.svelte'
 </script>
 
 <NavHost />
@@ -12,7 +13,8 @@
 	<Hero />
 	<About />
 	<Repos />
-	<Timeline />
+	<EducationTimeline />
+	<ExperienceTimeline/>
 	<Footer />
 </main>
 

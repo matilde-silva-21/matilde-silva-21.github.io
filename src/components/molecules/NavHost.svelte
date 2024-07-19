@@ -1,10 +1,20 @@
 <script lang="ts">
 	import Nav from '../atoms/Nav.svelte';
 	let y: number;
+
+	function moveNavBarOnScroll() {
+		if (window.innerWidth < 868) {
+			let elem = document.getElementById("navBarBottomScreen");
+			if (elem && y) {
+				elem.scrollLeft = y/3;
+			}
+		}
+	}
+
 </script>
 
 <nav>
-	<div class:scrolled={y > 20}>
+	<div class:scrolled={y > 20} id="navBarBottomScreen" >
 		<ul>
 			<Nav href="#home" section="/" isSelected={y < 350}>
 				<svg
@@ -43,7 +53,19 @@
 				>
 			</Nav>
 			<!-- TODO fix da barra de navegaçao em mobile -->
-			<Nav href="#experience" section="experience" isSelected={y > 1000}>
+			<Nav href="#education" section="education" isSelected={y > 1000 && y < 2000}>
+				<svg
+					xmlns="http://www.w3.org/2000/svg"
+					width="24"
+					height="24"
+					fill="var(--accent)"
+					viewBox="0 0 24 24"
+					><path fill="none" d="M0 0h24v24H0z" /><path
+						d="M20 6h-4V4c0-1.11-.89-2-2-2h-4c-1.11 0-2 .89-2 2v2H4c-1.11 0-1.99.89-1.99 2L2 19c0 1.11.89 2 2 2h16c1.11 0 2-.89 2-2V8c0-1.11-.89-2-2-2zm-6 0h-4V4h4v2z"
+					/></svg
+				>
+			</Nav>
+			<Nav href="#experience" section="experience" isSelected={y > 2000}>
 				<svg
 					xmlns="http://www.w3.org/2000/svg"
 					width="24"
@@ -59,7 +81,7 @@
 	</div>
 </nav>
 
-<svelte:window bind:scrollY={y} />
+<svelte:window bind:scrollY={y} on:scroll={moveNavBarOnScroll} />
 
 <style lang="scss">
 	nav {
@@ -89,14 +111,14 @@
 	}
 	@media (min-width: 868px) {
 		div {
-			width: 40rem;
+			width: 53rem;
 			border-radius: 12px;
 		}
 		.scrolled {
 			border-bottom: 1.5px solid var(--accent-opacity);
 			padding: 0.5rem 0;
 			margin-top: 0.5rem;
-			width: 40rem;
+			width: 53rem;
 			background-color: var(--elevation-five);
 			box-shadow: 0px 15px 8px -10px rgba(0, 0, 0, 0.4);
 		}
@@ -107,13 +129,14 @@
 			bottom: 0;
 			top: auto;
 			padding: 0rem;
+			display: flex;
 			background-color: var(--elevation-one);
+			overflow: scroll;
 		}
 
 		div ul {
 			display: flex;
 			justify-content: space-evenly;
-			overflow: scroll;
 		}
 	}
 </style>

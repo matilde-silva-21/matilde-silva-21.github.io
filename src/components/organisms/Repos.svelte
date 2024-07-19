@@ -181,10 +181,6 @@
 		margin-bottom: 3rem;
 		position: relative;
 
-		&:before {
-			@include outlineText($content: 'λ', $translateX: 1150%, $translateY: -30%);
-		}
-
 		@media (max-width: 600px) {
 			grid-template-columns: 1fr;
 		}
