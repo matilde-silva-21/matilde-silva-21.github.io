@@ -1,52 +1,69 @@
 <script>
-import {
-	Timeline,
-	TimelineItem,
-	TimelineSeparator,
-	TimelineDot,
-	TimelineConnector,
-	TimelineContent,
-	TimelineOppositeContent
-} from 'svelte-vertical-timeline';
+	import { Timeline } from 'svelte-vertical-timeline';
+	import TimeItem from './TimeItem.svelte';
 
-const options = [
-	{ title: 'Eat', time: '09:30 am' },
-	{ title: 'Sleep', time: '10:00 am' },
-	{ title: 'Code', time: '11:00 am' },
-	{ title: 'Eat', time: '01:00 pm' },
-	{ title: 'Eat', time: '09:30 am' },
-	{ title: 'Sleep', time: '10:00 am' },
-	{ title: 'Code', time: '11:00 am' },
-	{ title: 'Eat', time: '01:00 pm' },
-	{ title: 'Eat', time: '09:30 am' },
-	{ title: 'Sleep', time: '10:00 am' },
-	{ title: 'Code', time: '11:00 am' },
-	{ title: 'Eat', time: '01:00 pm' }
-];
+	let size = 0;
+
+	const educationSlots = [
+		{
+			contentTitle: 'Cambridge Assessment',
+			contentDescription: 'Certificate of Proficiency in English - Council of Europe Level C2',
+			oppositeContent: 'NOV. 2019',
+			timelineIcon: 'fluent:certificate-20-regular',
+			hyperlink: 'https://www.cambridgeenglish.org/'
+		},
+		{
+			contentTitle: 'University of Porto',
+			contentDescription:
+				"Bachelor's in Informatics and Computing Engineering",
+			oppositeContent: 'SEP. 2020 - JUL. 2023',
+			timelineIcon: 'fluent-mdl2:education',
+			hyperlink: 'https://sigarra.up.pt/feup/en/WEB_PAGE.INICIAL'
+		},
+		{
+			contentTitle: 'University of Porto',
+			contentDescription: "Master's in Informatics and Computing Engineering",
+			oppositeContent: 'SEP. 2023 - PRESENT',
+			timelineIcon: 'fluent-mdl2:education',
+			hyperlink: 'https://sigarra.up.pt/feup/en/WEB_PAGE.INICIAL'
+		},
+		{
+			contentTitle: 'TU Wien Informatics',
+			contentDescription: 'Exchange programme ERASMUS+',
+			oppositeContent: 'SEP. 2024 - FEB. 2025',
+			timelineIcon: 'clarity:world-line',
+			hyperlink: 'https://informatics.tuwien.ac.at/'
+		}
+	];
+  
 </script>
+
+<svelte:window bind:innerWidth={size} />
 
 <section id="education" class="wrapper">
 	<div class="title">
 		<h2>education</h2>
 	</div>
-	<Timeline position="alternate">
-	{#each options as option}
-		<TimelineItem>
-			<TimelineOppositeContent slot="opposite-content">
-				<p>{option.time}</p>
-			</TimelineOppositeContent>
-			<TimelineSeparator>
-				<TimelineDot style={'background-color: #7CD5E2;'}/>
-				<TimelineConnector />
-			</TimelineSeparator>
-			<TimelineContent>
-				<h3>{option.title}</h3>
-			</TimelineContent>
-		</TimelineItem>
-	{/each}
-	</Timeline>
-</section>
+	
+	{#if size > 868}
 
+	<Timeline position="alternate">
+		{#each educationSlots as eduSlot, index}
+			<TimeItem slot={eduSlot} lastSlot={index !== educationSlots.length - 1} desktopLayout={true}/>
+		{/each}
+	</Timeline>
+
+	{:else}
+
+	<Timeline>
+		{#each educationSlots as eduSlot, index}
+			<TimeItem slot={eduSlot} lastSlot={index !== educationSlots.length - 1} desktopLayout={false}/>
+		{/each}
+	</Timeline>
+	
+	{/if}
+
+</section>
 
 <style lang="scss">
 	@import '../../styles/mixins.scss';
@@ -67,7 +84,7 @@ const options = [
 	}
 
 	section {
-		margin-bottom: 6rem;
+		margin-bottom: 4.75rem;
 		gap: 4.5rem;
 		grid-template-columns: 1fr 1fr;
 		align-items: center;

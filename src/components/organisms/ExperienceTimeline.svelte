@@ -1,52 +1,69 @@
 <script>
-import {
-	Timeline,
-	TimelineItem,
-	TimelineSeparator,
-	TimelineDot,
-	TimelineConnector,
-	TimelineContent,
-	TimelineOppositeContent
-} from 'svelte-vertical-timeline';
+	import { Timeline } from 'svelte-vertical-timeline';
+	import TimeItem from './TimeItem.svelte';
 
-const options = [
-	{ title: 'Eat', time: '09:30 am' },
-	{ title: 'Sleep', time: '10:00 am' },
-	{ title: 'Code', time: '11:00 am' },
-	{ title: 'Eat', time: '01:00 pm' },
-	{ title: 'Eat', time: '09:30 am' },
-	{ title: 'Sleep', time: '10:00 am' },
-	{ title: 'Code', time: '11:00 am' },
-	{ title: 'Eat', time: '01:00 pm' },
-	{ title: 'Eat', time: '09:30 am' },
-	{ title: 'Sleep', time: '10:00 am' },
-	{ title: 'Code', time: '11:00 am' },
-	{ title: 'Eat', time: '01:00 pm' }
-];
+	let size = 0;
+
+	const experienceSlots = [
+		{
+			contentTitle: 'Armis Intelligent Transport Systems',
+			contentDescription: 'Curricular Internship - Creation of a Traffic Status classification model, using Artificial Intelligence',
+			oppositeContent: 'FEB. 2023 - JUL. 2023',
+			timelineIcon: 'material-symbols:work-outline',
+			hyperlink: 'https://www.armisgroup.com/intelligent-transport-systems/'
+		},
+		{
+			contentTitle: 'Formula Student Driverless FEUP',
+			contentDescription:
+				"Research and Development of smart and automated driving systems",
+			oppositeContent: 'MAY 2023 - SEP. 2023',
+			timelineIcon: 'gravity-ui:plug-connection',
+			hyperlink: 'https://formulastudent.fe.up.pt/en/'
+		},
+		{
+			contentTitle: 'Sky Portugal',
+			contentDescription: "Summer Internship - iOS Apprentice Developer",
+			oppositeContent: 'JUL. 2024 - AUG. 2024',
+			timelineIcon: 'material-symbols:work-outline',
+			hyperlink: 'https://www.sky.com/'
+		},
+		{
+			contentTitle: 'Computer Graphics and Multimedia Nucleus',
+			contentDescription: 'Game Development and organization of multimedia events',
+			oppositeContent: 'SEP. 2023 - PRESENT',
+			timelineIcon: 'gravity-ui:plug-connection',
+			hyperlink: 'https://ncgm.fe.up.pt/en/home'
+		}
+	];
+  
 </script>
+
+<svelte:window bind:innerWidth={size} />
 
 <section id="experience" class="wrapper">
 	<div class="title">
 		<h2>experience</h2>
 	</div>
-	<Timeline position="alternate">
-	{#each options as option}
-		<TimelineItem>
-			<TimelineOppositeContent slot="opposite-content">
-				<p>{option.time}</p>
-			</TimelineOppositeContent>
-			<TimelineSeparator>
-				<TimelineDot style={'background-color: #7CD5E2;'}/>
-				<TimelineConnector />
-			</TimelineSeparator>
-			<TimelineContent>
-				<h3>{option.title}</h3>
-			</TimelineContent>
-		</TimelineItem>
-	{/each}
-	</Timeline>
-</section>
+	
+	{#if size > 868}
 
+	<Timeline position="alternate">
+		{#each experienceSlots as expSlot, index}
+			<TimeItem slot={expSlot} lastSlot={index !== experienceSlots.length - 1} desktopLayout={true}/>
+		{/each}
+	</Timeline>
+
+	{:else}
+
+	<Timeline>
+		{#each experienceSlots as expSlot, index}
+			<TimeItem slot={expSlot} lastSlot={index !== experienceSlots.length - 1} desktopLayout={false}/>
+		{/each}
+	</Timeline>
+	
+	{/if}
+
+</section>
 
 <style lang="scss">
 	@import '../../styles/mixins.scss';
@@ -66,7 +83,11 @@ const options = [
 		margin-bottom: 1rem;
 	}
 
-	.wrapper {
-		margin-bottom: 2.75rem;
+	section {
+		margin-bottom: 4.75rem;
+		gap: 4.5rem;
+		grid-template-columns: 1fr 1fr;
+		align-items: center;
 	}
+	
 </style>
