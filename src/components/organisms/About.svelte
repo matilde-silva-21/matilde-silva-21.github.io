@@ -3,7 +3,7 @@
 
 	// i didnt write this idk
 	let getAge = () => {
-		let birthDate = new Date('2007/03/24');
+		let birthDate = new Date('2002/12/01');
 		const ageMs = Date.now() - birthDate.getTime();
 		const preciseAge = (ageMs / 31536000000).toFixed(10);
 		return preciseAge;
@@ -19,19 +19,16 @@
 	<div class="text">
 		<h2>about me</h2>
 		<p>
-			Hey there, I'm afn! :] I'm a <Tooltip tip={age}
-				><span>{Math.floor(Number(age))}</span></Tooltip
-			>
-			year old digital artist and graphic/UI designer based in Canada. I’ve taken art seriously since
-			<span>2017</span>, and have been doodling silly anime characters since <span>2020</span>.
-			Recently, however, I’ve grown a knack for programming. I like contributing to
-			<Tooltip tip="🤓">
-				<a href="https://github.com/xafn" target="_blank" rel="noreferrer">
-					<span>open source</span>
-				</a>
-			</Tooltip>
-			as a web developer, which is probably the reason why you've ended up here. Currently struggling
-			with Svelte and Typescript.
+			Hello stranger! My name is Matilde, I am natural from 
+			<span>Oporto, Portugal</span>
+			and I'm 
+			<Tooltip tip={age}><span>{Math.floor(Number(age))}</span></Tooltip>.
+			<br>I am an 
+			<Tooltip tip={"🖥️"}><a href="https://sigarra.up.pt/feup/en/CUR_GERAL.CUR_VIEW?pv_curso_id=742&pv_origem=CUR&pv_ano_lectivo=2021" target="_blank" rel="noopener noreferrer">
+				<span>Informatics and Computer Engineering</span>
+			</a></Tooltip>
+			student, currently on the 2nd year of my master's.
+			After my years of studying, I find myself interested by the areas of <span>Distributed Systems</span> and <span>Computer Networks</span>. You can check out my projects and past endeavours below :)
 		</p>
 	</div>
 </section>
