@@ -10,8 +10,8 @@
 
 <section id="home" class="wrapper">
 	<div>
-		<h1>afn</h1>
-		<h4>Hobbyist illustrator and designer. <br />Attempting to program.</h4>
+		<h1>matilde silva</h1>
+		<h4>0.5x programmer</h4>
 		<div class="socials">
 			<Socials />
 		</div>
@@ -65,9 +65,4 @@
 		}
 	}
 
-	@media screen and (max-width: 400px) {
-		h4 br {
-			content: '&#160;';
-		}
-	}
 </style>
