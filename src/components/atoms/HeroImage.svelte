@@ -1,49 +1,21 @@
 <script lang="ts">
 	let zoom: boolean;
-	let xRotation: number;
-	let yRotation: number;
-
-	function enterRotate3D(e: MouseEvent) {
-		zoom = true;
-		let img = e.target as HTMLDivElement;
-		yRotation = 13 * ((e.offsetX - img.clientHeight / 2) / img.clientWidth);
-		xRotation = -13 * ((e.offsetY - img.clientWidth / 2) / img.clientHeight);
-	}
-
-	function leaveRotate3D() {
-		zoom = false;
-		yRotation = 0;
-		xRotation = 0;
-	}
 </script>
 
 <div class="img-container">
-	<!-- TODO: mudar a imagem -->
 	<div
-		on:mousemove={enterRotate3D}
-		on:mouseleave={leaveRotate3D}
+		on:mousemove={()=>{zoom = true}}
+		on:mouseleave={()=>{zoom = false}}
 		class="img"
 		role="img"
-		style:background-image="url(art/afn.webp)"
-		style:transform="perspective(500px) {zoom ? 'scale(1.05)' : ''} rotateX({xRotation}deg) rotateY({yRotation}deg)"
+		style:background-image="url(resources/matilde.jpg)"
+		style:transform="perspective(500px) {zoom ? 'scale(1.05)' : ''}"
 	/>
 </div>
 
 <style lang="scss">
-	@keyframes float {
-		0% {
-			transform: translateY(7px);
-		}
-		50% {
-			transform: translateY(-7px);
-		}
-		100% {
-			transform: translateY(7px);
-		}
-	}
-
 	.img {
-		border-radius: 48px;
+		border-radius: 200px;
 		width: 425px;
 		height: 400px;
 		z-index: 1;
