@@ -18,7 +18,4 @@
 	<Footer />
 </main>
 
-<!--
-	https://github.com/sytanta/svelte-animated-timeline
-	https://github.com/K-Sato1995/svelte-vertical-timeline
--->
+

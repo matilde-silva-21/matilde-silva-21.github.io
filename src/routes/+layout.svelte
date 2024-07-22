@@ -1,37 +1,10 @@
 <script lang="ts">
-	import { onMount } from 'svelte';
 	import '../styles/global.scss';
 	import '../styles/fonts.scss';
 	import Cursor from '../components/atoms/Cursor.svelte';
 
 	let loading = true;
 
-	onMount(() => {
-		if (document.readyState === 'complete') {
-			loading = false;
-		}
-
-		const classes = document.querySelector('body')?.classList;
-		const stopResizeAnimation = () => {
-			let timer: any = 0;
-			window.addEventListener('resize', function () {
-				if (timer) {
-					clearTimeout(timer);
-					timer = null;
-				} else {
-					classes?.add('stop-transitions');
-				}
-
-				timer = setTimeout(() => {
-					classes?.remove('stop-transitions');
-					timer = null;
-				}, 100);
-			});
-		};
-
-		stopResizeAnimation();
-	});
-	
 </script>
 
 <svelte:head>
