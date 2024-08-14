@@ -11,6 +11,12 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
+      # If you're using pnpm, add this step then change the commands and cache key below to use `pnpm`
+      # - name: Install pnpm
+      #   uses: pnpm/action-setup@v3
+      #   with:
+      #     version: 8
+
       - name: Install Node.js
         uses: actions/setup-node@v4
         with:
@@ -29,33 +35,12 @@ jobs:
       - name: Upload Artifacts
         uses: actions/upload-pages-artifact@v3
         with:
+          # this should match the `pages` option in your adapter-static options
           path: 'build/'
 
-  compile_latex:
-    runs-on: ubuntu-latest
-    needs: build_site
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-
-      - name: Compile LaTeX sources
-        uses: xu-cheng/latex-action@2.2.1
-        with:
-          pre_compile: tlmgr update --self && tlmgr update --all
-          root_file: |
-            static/resources/curriculum_vitae.tex  # Replace with actual output from generate_handouts.sh, if any
-
-      - name: Ensure Publish Directory Exists
-        run: mkdir -p dist
-        shell: bash
-
-      - name: Move PDFs
-        run: mv ./*.pdf dist
-        shell: bash
-
   deploy:
+    needs: build_site
     runs-on: ubuntu-latest
-    needs: [build_site, compile_latex]
 
     permissions:
       pages: write
@@ -66,15 +51,6 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
 
     steps:
-      - name: Deploy LaTeX Output
-        uses: peaceiris/actions-gh-pages@v3.8.0
-        with:
-          deploy_key: ${{ secrets.GITHUB_DEPLOY_KEY }}
-          publish_dir: dist
-          allow_empty_commit: true
-          force_orphan: true
-          enable_jekyll: true
-
-      - name: Deploy Static Site
+      - name: Deploy
         id: deployment
         uses: actions/deploy-pages@v4

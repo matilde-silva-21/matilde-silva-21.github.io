@@ -4,9 +4,7 @@
 	import Socials from '../molecules/Socials.svelte';
 
 	function handleClick() {
-		// TODO uncomment this when CV is ready
-		//window.open(`/curriculum_vitae.html`, "_blank");
-		window.open(`/cv.html`, "_blank");
+		window.open(`/curriculum_vitae.html`, "_blank");
 	}
 </script>
 
