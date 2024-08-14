@@ -1,0 +1,223 @@
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage{ulem}
+\usepackage{xifthen}
+\input{glyphtounicode}
+
+
+%----------FONT OPTIONS----------
+% sans-serif
+% \usepackage[sfdefault]{FiraSans}
+% \usepackage[sfdefault]{roboto}
+% \usepackage[sfdefault]{noto-sans}
+% \usepackage[default]{sourcesanspro}
+
+% serif
+% \usepackage{CormorantGaramond}
+% \usepackage{charter}
+
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[5]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+      \if\relax\detokenize{#5}\relax
+        % Do nothing if #5 is empty
+      \else
+        \multicolumn{2}{@{}l}{\textit{\small#5}} \\
+      \fi
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & #2 \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+%----------HEADING----------
+% \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+%   \textbf{\href{http://sourabhbajaj.com/}{\Large Sourabh Bajaj}} & Email : \href{mailto:sourabh@sourabhbajaj.com}{sourabh@sourabhbajaj.com}\\
+%   \href{http://sourabhbajaj.com/}{http://www.sourabhbajaj.com} & Mobile : +1-123-456-7890 \\
+% \end{tabular*}
+
+\begin{center}
+    \textbf{\Huge \scshape Matilde Silva} \\ \vspace{10pt}
+    \small \href{https://matilde-silva-21.github.io/}{\uline{Personal Website}} $|$ \href{mailto:x@x.com}{\uline{matilde.m.silva.21@gmail.com}} $|$ 
+    \href{https://www.linkedin.com/in/matilde-m-silva/}{\uline{linkedin.com/in/matilde-m-silva/}} $|$
+    \href{https://github.com/matilde-silva-21}{\uline{github.com/matilde-silva-21}}
+\end{center}
+
+
+%-----------PROGRAMMING SKILLS-----------
+\section{Technical Skills}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     \textbf{Languages}{: C/C++, Golang, Javascript, Python, Rust, SQL, Swift, Typescript} \\
+     \textbf{Frameworks}{: Flutter, Laravel, NodeJS, ReactJS, SvelteKit, SwiftUI} \\
+     \textbf{Developer Tools}{: Docker, Figma, Git, Jenkins, Jupyter Notebook, Microsoft Azure, Visual Studio Code, XCode}
+    }}
+ \end{itemize}
+
+%-----------EDUCATION-----------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {\href{https://sigarra.up.pt/feup/en/WEB_PAGE.INICIAL}{University of Porto}}{Oporto, Portugal}
+      {Bachelor’s in Informatics and Computing Engineering}{Sep. 2020 - Jul. 2023}
+      {Final Grade: 15/20}
+    \resumeSubheading
+      {\href{https://sigarra.up.pt/feup/en/WEB_PAGE.INICIAL}{University of Porto}}{Oporto, Portugal}
+      {Master’s in Informatics and Computing Engineering}{Sep. 2023 - Jul. 2025}
+      {Current Grade: 16/20}
+    \resumeSubheading
+      {\href{https://informatics.tuwien.ac.at/}{TU Wien Informatics}}{Vienna, Austria}
+      {Exchange Program Erasmus+}{Sep. 2024 - Feb. 2025}
+      {}
+  \resumeSubHeadingListEnd
+\leavevmode \\ % Extra Line for space
+
+%-----------EXPERIENCE-----------
+%---Multiple Positions Heading---
+%    \resumeSubSubheading
+%     {Software Engineer I}{Oct 2014 - Sep 2016}
+%     \resumeItemListStart
+%        \resumeItem{Apache Beam}
+%          {Apache Beam is a unified model for defining both batch and streaming data-parallel processing pipelines}
+%     \resumeItemListEnd
+%    \resumeSubHeadingListEnd
+%-------------------------------------------
+
+\section{Experience}
+  \resumeSubHeadingListStart
+
+    \resumeSubheading
+        {iOS Internship}{Jul. 2024 - Aug. 2025}
+        {\href{https://www.sky.com/}{Sky Portugal}}{Aveiro, Portugal}
+        {}
+        \resumeItemListStart
+            \resumeItem{Selected as one of 900+ candidates nationwide for a 2-month summer internship for recent graduates based on soft skills and character traits}
+            \resumeItem{Developed, implemented and tested in-app toast notifications using Swift and SwiftUI}
+        \resumeItemListEnd
+
+    \resumeSubheading
+      {Intelligent Transport Systems Internship}{Feb. 2023 - Jul. 2023}
+      {\href{https://www.armisgroup.com/intelligent-transport-systems/}{Armis Intelligent Transport Systems}}{Oporto, Portugal}
+      {}
+      \resumeItemListStart
+        \resumeItem{Selected as one of 50+ candidates for a 6-month curricular internship based on academic success and skill potential}
+        \resumeItem{Engineered a Machine Learning model to determine Traffic Status based on traffic data}
+        \resumeItem{Deployed REST API, with Azure Cloud Services, to communicate with the server running the ML model}
+      \resumeItemListEnd
+  \resumeSubHeadingListEnd
+\leavevmode \\ % Extra Line for space
+
+%-----------Extracurriculars-----------
+\section{Extracurriculars}
+    \resumeSubHeadingListStart
+      \resumeProjectHeading
+                {\textbf{\href{https://ncgm.fe.up.pt/en/home}{Computer Graphics and Multimedia Nucleus}}}{Sep. 2023 - Present}
+          \resumeItemListStart
+            \resumeItem{Part of the organization of different game and media related events that brought together 60+ attendees}
+          \resumeItemListEnd
+      \resumeProjectHeading
+          {\textbf{\href{https://formulastudent.fe.up.pt/en/}{Formula Student Driverless FEUP}}}{May 2023 - Sep. 2023}
+          \resumeItemListStart
+            \resumeItem{Research and development of technologies to be used in automated systems assisted by Artificial Intelligence}
+          \resumeItemListEnd
+    \resumeSubHeadingListEnd
+\leavevmode \\ % Extra Line for space
+
+%-------------------------------------------
+
+
+%-----------------Projects------------------
+\section{Projects}
+\resumeSubHeadingListStart
+      \resumeProjectHeading
+          {\textbf{\href{https://github.com/matilde-silva-21/grs_project}{NetKing}} $|$ \emph{Typescript, Rust, Docker, Tauri}}{Feb. 2024 - Jul. 2024}
+          \resumeItemListStart
+            \resumeItem{Created a network management system to facilitate visualization and virtualization of networks with a partner}
+            \resumeItem{Employed Docker containers to host different services, such as Nginx servers and a built from scratch DNS server}
+          \resumeItemListEnd
+      \resumeProjectHeading
+          {\textbf{\href{https://ncgm.fe.up.pt/en/home}{List Llama}} $|$ \emph{Golang, ReactJS, RabbitMQ}}{Sep. 2023 - Jan. 2024}
+          \resumeItemListStart
+            \resumeItem{Developed a concurrent shopping list application based on \href{https://crdt.tech/}{Conflict-Free Replicated Data Types (CRDTs)}}
+            \resumeItem{Architected a load-balancing service with an orchestrator to handle client requests to servers}
+            \resumeItem{Implemented a shopping list sharing feature through the use of URLs}
+          \resumeItemListEnd
+    \resumeSubHeadingListEnd
+\leavevmode \\ % Extra Line for space    
+%-------------------------------------------
+\end{document}

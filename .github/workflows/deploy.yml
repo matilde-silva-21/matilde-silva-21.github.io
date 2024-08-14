@@ -36,8 +36,14 @@ jobs:
         uses: actions/upload-pages-artifact@v3
         with:
           # this should match the `pages` option in your adapter-static options
-          path: 'build/'
-
+          path: '/${{ github.event.repository.name }}'
+      
+      - name: PubTex
+        uses: jonhue/pubtex-action@v1.1.0
+        with:
+          files: |
+            resources/curriculum_vitae.tex
+  
   deploy:
     needs: build_site
     runs-on: ubuntu-latest
