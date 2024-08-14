@@ -41,7 +41,7 @@ jobs:
       - name: Latex Compile
         uses: jonhue/pubtex-action@main
         with:
-          files: /resources/curriculum_vitae.tex
+          files: static/resources/curriculum_vitae.tex
 
   deploy:
     needs: build_site
