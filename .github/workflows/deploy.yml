@@ -41,17 +41,16 @@ jobs:
       - name: Compile LaTeX sources
         uses: xu-cheng/latex-action@2.2.1
         with:
-          pre_compile: ${{ inputs.pre_compile_command }}
+          pre_compile: tlmgr update --self && tlmgr update --all
           root_file: |
-            ${{ steps.generate-handouts.outputs.handouts }}
-            ${{ inputs.files }}
+            static/resources/curriculum_vitae.tex  # Replace with actual output from generate_handouts.sh, if any
 
       - name: Ensure Publish Directory Exists
-        run: mkdir -p ${{ inputs.publish_dir }}
+        run: mkdir -p dist
         shell: bash
 
       - name: Move PDFs
-        run: mv ./*.pdf ${{ inputs.publish_dir }}
+        run: mv ./*.pdf dist
         shell: bash
 
   deploy:
@@ -70,8 +69,8 @@ jobs:
       - name: Deploy LaTeX Output
         uses: peaceiris/actions-gh-pages@v3.8.0
         with:
-          deploy_key: ${{ inputs.deploy_key }}
-          publish_dir: ${{ inputs.publish_dir }}
+          deploy_key: ${{ secrets.GITHUB_DEPLOY_KEY }}
+          publish_dir: dist
           allow_empty_commit: true
           force_orphan: true
           enable_jekyll: true
