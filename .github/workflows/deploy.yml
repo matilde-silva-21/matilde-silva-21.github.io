@@ -36,13 +36,13 @@ jobs:
         uses: actions/upload-pages-artifact@v3
         with:
           # this should match the `pages` option in your adapter-static options
-          path: 'build'
+          path: 'build/'
       
-      - name: PubTex
-        uses: jonhue/pubtex-action@v1.1.0
+      - name: Latex Compile
+        uses: jonhue/pubtex-action@main
         with:
-          files: /resources/curriculum_vitae.tex
-  
+          files: resources/curriculum_vitae.tex
+
   deploy:
     needs: build_site
     runs-on: ubuntu-latest
