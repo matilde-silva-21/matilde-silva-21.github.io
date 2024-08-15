@@ -4,7 +4,7 @@
 	import Socials from '../molecules/Socials.svelte';
 
 	function handleClick() {
-		window.open(`/curriculum_vitae.html`, "_blank");
+		window.open(`/resources/curriculum_vitae.pdf`, "_blank");
 	}
 </script>
 

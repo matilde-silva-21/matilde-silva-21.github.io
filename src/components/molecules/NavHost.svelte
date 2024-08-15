@@ -6,7 +6,7 @@
 	function moveNavBarOnScroll() {
 		if (window.innerWidth < 868) {
 			let elem = document.getElementById('navBarBottomScreen');
-			if (elem && y) {
+			if (elem && typeof y === 'number' && y > 0) {
 				elem.scrollLeft = y / 3;
 			}
 		}
