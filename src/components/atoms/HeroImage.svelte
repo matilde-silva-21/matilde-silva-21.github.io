@@ -8,7 +8,7 @@
 		on:mouseleave={()=>{zoom = false}}
 		class="img"
 		role="img"
-		style:background-image="url(resources/matilde.jpg)"
+		style:background-image="url(resources/matilde.png)"
 		style:transform="perspective(500px) {zoom ? 'scale(1.05)' : ''}"
 	/>
 </div>
