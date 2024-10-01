@@ -32,7 +32,7 @@
 			contentDescription: 'Game Development and organization of multimedia events',
 			oppositeContent: 'SEP. 2023 - PRESENT',
 			timelineIcon: 'gravity-ui:plug-connection',
-			hyperlink: 'https://ncgm.fe.up.pt/en/home'
+			hyperlink: 'https://ncgm.fe.up.pt/'
 		}
 	];
   
