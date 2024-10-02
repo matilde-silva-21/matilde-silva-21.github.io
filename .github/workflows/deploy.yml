@@ -15,19 +15,6 @@ jobs:
         uses: xu-cheng/latex-action@3.2.0
         with:
           root_file: static/resources/curriculum_vitae.tex
-      
-      - name: Copy
-        run: |
-          mkdir out
-          cp ./curriculum_vitae.pdf ./out/curriculum_vitae.pdf
-      - uses: actions/upload-artifact@v3
-        with:
-          name: curriculum_vitae
-          path: out/curriculum_vitae.pdf
-
-      - name: Check pdf file exists
-        run: |
-          file curriculum_vitae.pdf | grep -q ' PDF '
 
       - name: Upload CV
         run: |
