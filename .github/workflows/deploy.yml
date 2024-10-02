@@ -15,7 +15,7 @@ jobs:
         uses: xu-cheng/latex-action@3.2.0
         with:
           root_file: |
-            /resources/curriculum_vitae.tex
+            /static/resources/curriculum_vitae.tex
       
       - name: Copy
         run: |
