@@ -21,7 +21,7 @@ jobs:
         run: |
           mkdir out
           cp ./curriculum_vitae.pdf ./out/curriculum_vitae.pdf
-      - uses: actions/upload-artifact@v2
+      - uses: actions/upload-artifact@v3
         with:
           name: curriculum_vitae
           path: out/curriculum_vitae.pdf
