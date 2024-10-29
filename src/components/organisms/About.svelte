@@ -28,7 +28,7 @@
 				<span>Informatics and Computer Engineering</span>
 			</a></Tooltip>
 			student, currently on the 2nd year of my master's.
-			After my years of studying, I find myself interested by the areas of <span>Distributed Systems</span> and <span>Computer Networks</span>. You can check out my projects and past endeavours below :)
+			After my years of studying, I am interested in <span>Distributed Systems</span> and the <span>Cloud Continuum</span>. You can check out my projects and past endeavours below :)
 		</p>
 	</div>
 </section>
