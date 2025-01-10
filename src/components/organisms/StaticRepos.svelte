@@ -17,7 +17,7 @@
 		{
 			link: 'https://github.com/matilde-silva-21/SDLE_project',
 			owner: 'matilde-silva-21',
-			repo: 'SDLE_project',
+			repo: 'List Llama',
 			description:
 				'Concurrent Shopping List made with Conflict-free Replicated Data Types (CRDT). Project for Large Scale Distributed Systems course (23/24)',
 			languageColor: 'rgb(0, 173, 216)',
@@ -26,20 +26,20 @@
 			forks: 0
 		},
 		{
-			link: 'https://github.com/matilde-silva-21/PI',
+			link: 'https://github.com/matilde-silva-21/iot_agricultural_simulation',
 			owner: 'matilde-silva-21',
-			repo: 'PI',
+			repo: 'IoT Agricultural Simulation',
 			description:
-				'Creation of an AI model to classify Traffic Status based on traffic flux, velocity, density, etc. Made for Capstone Project course (22/23)',
-			languageColor: 'rgb(218, 91, 11)',
-			language: 'Jupyter Notebook',
+				'An IoT architecture created with an algricultural use case in mind. All components are virtualized. Project done for Project in Computer Science course (TUWien 24/25)',
+			languageColor: 'rgb(48, 105, 152)',
+			language: 'Python',
 			stars: 0,
 			forks: 0
 		},
 		{
 			link: 'https://github.com/matilde-silva-21/grs_project',
 			owner: 'matilde-silva-21',
-			repo: 'grs_project',
+			repo: 'NetKing',
 			description:
 				'Network management system to facilitate visualization and virtualization of networks. Made for Networks and Systems Management course (23/24)',
 			languageColor: 'rgb(49, 120, 198)',

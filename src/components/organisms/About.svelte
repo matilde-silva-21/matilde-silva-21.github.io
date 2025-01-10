@@ -24,7 +24,7 @@
 			and I'm 
 			<Tooltip tip={age}><span>{Math.floor(Number(age))}</span></Tooltip>.
 			<br>I am an 
-			<Tooltip tip={"🖥️"}><a href="https://sigarra.up.pt/feup/en/CUR_GERAL.CUR_VIEW?pv_curso_id=742&pv_origem=CUR&pv_ano_lectivo=2021" target="_blank" rel="noopener noreferrer">
+			<Tooltip tip={"🖥️"}><a href="https://sigarra.up.pt/feup/en/cur_geral.cur_view?pv_ano_lectivo=2024&pv_origem=CUR&pv_tipo_cur_sigla=M&pv_curso_id=22862" target="_blank" rel="noopener noreferrer">
 				<span>Informatics and Computer Engineering</span>
 			</a></Tooltip>
 			student, currently on the 2nd year of my master's.
