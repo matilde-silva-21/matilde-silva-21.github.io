@@ -11,34 +11,6 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Github Action for LaTeX
-        uses: xu-cheng/latex-action@3.2.0
-        with:
-          root_file: static/resources/curriculum_vitae.tex
-
-      - name: Upload CV
-        run: |
-          # configure git
-          git config --global user.name "matilde-silva-21"
-          git config --global user.email "matilde.m.silva.21@gmail.com"
-
-          # setup ssh
-          mkdir ~/.ssh
-          chmod 700 ~/.ssh
-          echo "$DEPLOY_KEY" > ~/.ssh/id_ed25519
-          chmod 600 ~/.ssh/id_ed25519
-          git config --global core.sshCommand "ssh -i ~/.ssh/id_ed25519 -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no"
-
-          git clone --depth=1 git@github.com:matilde-silva-21/matilde-silva-21.github.io.git "$GITHUB_WORKSPACE/website"
-          cp -f curriculum_vitae.pdf "$GITHUB_WORKSPACE/website/static/resources/curriculum_vitae.pdf"
-          cd "$GITHUB_WORKSPACE/website"
-          git add static/resources/curriculum_vitae.pdf
-          git commit -m "[github actions] update cv"
-          git push
-        env:
-          DEPLOY_KEY: ${{ secrets.DEPLOY_KEY }}
-        if: github.event_name == 'push' && github.ref == 'refs/heads/master'
-
       # If you're using pnpm, add this step then change the commands and cache key below to use `pnpm`
       # - name: Install pnpm
       #   uses: pnpm/action-setup@v3
