@@ -21,18 +21,18 @@
 			hyperlink: 'https://sigarra.up.pt/feup/en/WEB_PAGE.INICIAL'
 		},
 		{
-			contentTitle: 'University of Porto',
-			contentDescription: "Master's in Informatics and Computing Engineering",
-			oppositeContent: 'SEP. 2023 - PRESENT',
-			timelineIcon: 'fluent-mdl2:education',
-			hyperlink: 'https://sigarra.up.pt/feup/en/WEB_PAGE.INICIAL'
-		},
-		{
 			contentTitle: 'TU Wien Informatics',
 			contentDescription: 'Exchange programme ERASMUS+',
 			oppositeContent: 'SEP. 2024 - FEB. 2025',
 			timelineIcon: 'clarity:world-line',
 			hyperlink: 'https://informatics.tuwien.ac.at/'
+		},
+		{
+			contentTitle: 'University of Porto',
+			contentDescription: "Master's in Informatics and Computing Engineering",
+			oppositeContent: 'SEP. 2023 - AUG. 2025',
+			timelineIcon: 'fluent-mdl2:education',
+			hyperlink: 'https://sigarra.up.pt/feup/en/WEB_PAGE.INICIAL'
 		}
 	];
   

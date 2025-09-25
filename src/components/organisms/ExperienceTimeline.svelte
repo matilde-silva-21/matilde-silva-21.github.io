@@ -30,9 +30,23 @@
 		{
 			contentTitle: 'Computer Graphics and Multimedia Nucleus',
 			contentDescription: 'Game Development and organization of multimedia events',
-			oppositeContent: 'SEP. 2023 - PRESENT',
+			oppositeContent: 'SEP. 2023 - JUL. 2025',
 			timelineIcon: 'gravity-ui:plug-connection',
 			hyperlink: 'https://ncgm.fe.up.pt/'
+		},
+		{
+			contentTitle: 'SYSTEC - Research Center for Systems and Technologies',
+			contentDescription: 'Academic Researcher',
+			oppositeContent: 'FEB. 2025 - AUG. 2025',
+			timelineIcon: 'material-symbols:work-outline',
+			hyperlink: 'https://systec.fe.up.pt/'
+		},
+		{
+			contentTitle: 'Amazon Web Services',
+			contentDescription: 'Software Developer Engineer',
+			oppositeContent: 'SEP. 2025 - PRESENT',
+			timelineIcon: 'material-symbols:work-outline',
+			hyperlink: 'https://aws.amazon.com/'
 		}
 	];
   

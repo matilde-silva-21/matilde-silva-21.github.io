@@ -19,15 +19,14 @@
 	<div class="text">
 		<h2>about me</h2>
 		<p>
-			Hello stranger! My name is Matilde, I am natural from 
+			Hello stranger! My name is Matilde, I am from 
 			<span>Oporto, Portugal</span>
 			and I'm 
 			<Tooltip tip={age}><span>{Math.floor(Number(age))}</span></Tooltip>.
-			<br>I am an 
-			<Tooltip tip={"🖥️"}><a href="https://sigarra.up.pt/feup/en/cur_geral.cur_view?pv_ano_lectivo=2024&pv_origem=CUR&pv_tipo_cur_sigla=M&pv_curso_id=22862" target="_blank" rel="noopener noreferrer">
-				<span>Informatics and Computer Engineering</span>
-			</a></Tooltip>
-			student, currently on the 2nd year of my master's.
+			<br>I am a 
+			<Tooltip tip={"🖥️"}><a href="https://aws.amazon.com/" target="_blank" rel="noopener noreferrer">
+				<span>Software Developer Engineer</span>
+			</a></Tooltip> at AWS.
 			After my years of studying, I am interested in <span>Distributed Systems</span> and the <span>Cloud Continuum</span>. You can check out my projects and past endeavours below :)
 		</p>
 	</div>
